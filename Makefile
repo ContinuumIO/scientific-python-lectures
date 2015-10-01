@@ -26,8 +26,8 @@ output:
 	runipy -o Lecture-4-Matplotlib.ipynb
 	runipy -o Lecture-5-Sympy.ipynb
 	# Really doesn't run well at all on my system
-	#runipy -o Lecture-6B-Fortran-and-C.ipynb
-	#runipy -o Lecture-6B-HPC.ipynb
+	runipy -o Lecture-6B-Fortran-and-C.ipynb
+	runipy -o Lecture-6B-HPC.ipynb
 
 strip: $(LATEXFILES)
 	./strip-preambles.py
