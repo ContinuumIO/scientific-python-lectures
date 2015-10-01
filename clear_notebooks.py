@@ -12,6 +12,8 @@ def clear_nb(lecture):
         for cell in worksheet['cells']:
             if 'outputs' in cell:
                 cell['outputs'] = []
+            if "prompt_number" in cell:
+                del cell["prompt_number"]
     write(nb, open(lecture, 'w'))
 
 if __name__ == '__main__':
