@@ -7,7 +7,7 @@ preamble = open('Preamble.tex').read()
 bodies = []
 end = '\\end{document}'
 
-for lecture in glob("Lecture*.tex"):
+for lecture in sorted(glob("Lecture*.tex")):
     print("Processing:", lecture, file=sys.stderr)
     tex = open(lecture).read()
     _, body = tex.split('\\maketitle')
