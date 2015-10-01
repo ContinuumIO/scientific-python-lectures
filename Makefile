@@ -41,7 +41,9 @@ buildpdf: toc
 	$(PDFLATEX) Scientific-Computing-with-Python.tex
 
 clean:
-	rm -f *.toc *.aux *.log *.out $(LATEXFILES) Scientific-Computing-with-Python.tex chapter.tplx animation.mp4 filename.png mpi-matrix-vector.py mpi-numpy-array.py mpi-psum.py mpitest.py mymodule.py opencl-dense-mv.py random-matrix.csv random-matrix.npy random-vector.npy test.svg
+	rm -f *.toc *.aux *.log *.out $(LATEXFILES) Scientific-Computing-with-Python.tex chapter.tplx animation.mp4 filename.png mpi-matrix-vector.py mpi-numpy-array.py mpi-psum.py mpitest.py mymodule.py opencl-dense-mv.py random-matrix.csv random-matrix.npy random-vector.npy test.svg cy_* dcumsum* dprod* functions* hello* setup.py *.so run_hello_c.
+	rm -rf .ipynb_checkpoints/
+	rm -rf build
 	rm -rf Lecture-2-Numpy_files/
 	rm -rf Lecture-3-Scipy_files/
 	rm -rf Lecture-4-Matplotlib_files/
@@ -53,6 +55,7 @@ clean:
 	rm -rf gitdemo2/
 	rm -rf qutip/
 	rm -rf __pycache__/
+	python clear_notebooks.py
 
 clobber: clean
 	rm -f Scientific-Computing-with-Python.pdf 

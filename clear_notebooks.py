@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 Clear all the output parts of cells in the notebooks
+
+Fuller script for vaious ipython/jupyter versions:
+https://github.com/toobaz/ipynb_output_filter/blob/master/ipynb_output_filter.py
 """
 from IPython.nbformat.current import read, write
 from glob import glob
